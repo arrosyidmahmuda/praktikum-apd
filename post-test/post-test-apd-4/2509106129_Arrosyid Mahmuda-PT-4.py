@@ -1,55 +1,150 @@
-while True:
-    NIM = input("masukkan NIM anda: ")
+# # #mendefinisikan list
+# # praktikum = ["Mahasiswa", 20, True, 45.10, ["APD",25]]
+# # print(praktikum[4][1])
 
-    if NIM.isdigit():
-        break
-    else:
-        print("input tidak valid, masukkan angka")
+# # list awal
+# studyclub = ["Data Science", "Robotics", "Multimedia", "Network"]
+# # Tambahkan Web
+# studyclub.append("Web")
+# print(studyclub)
 
-# misi 1
-stamina = int(NIM[-3:])
-chakra = 0
+# list awal
+# studyclub = ["Data Science", "Robotics", "Multimedia", "Network"]
+# # Tambahkan Web
+# studyclub.insert(1,"Web")
+# print(studyclub)
 
-while chakra < 200 and stamina > 0:
-    chakra += 5
-    stamina -= 3
-print("\n============ MISI 1: TES KONSENTRASI ============")
-print(f"Chakra terkumpul: {chakra}")
-print(f"sisa stamina: {stamina}")
-if chakra >= 200:
-    print("Status: Naruto berhasil menyempurnakan Rasengan!")
-else:
-    print("Status: Naruto kehabisan stamina sebelum berhasil.")
-print("=================================================")
+# list awal
+# studyclub = ["Data Science", "Robotics", "Multimedia", "Network"]
+# # Tambahkan Web
+# studyclub[2] = "AI"
+# print(studyclub)
 
-# misi 2
-tinggi_menara = int(NIM[-2:])
-gulungan = 0
+# del itu hapusnya dengan elemen
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+# print(matakuliah)
+# # menghapus elemen pada indeks ke-2, yakni "Kalkulus"
+# del matakuliah[2]
+# print(matakuliah)
 
-for i in range(3,tinggi_menara+1, 3):
-    gulungan += 1
+# # remove untuk variable mana yg mau kita hapus
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+# print(matakuliah)
+# # menghapus elemen dengan nilai "Kalkulus"
+# matakuliah.remove('Kalkulus')
+# print(matakuliah)
 
-print("\n========= MISI 2: INFILTRASI ==========")
-print(f"tinggi menara: {tinggi_menara} meter")
-print(f"gulungan informasi yang didapatkan: {gulungan} ")
-print("=======================================")
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit']
+# print(matakuliah)
+# # Menghapus & mengambil elemen 'Kalkulus' pada indeks ke-2
+# sampah = matakuliah.pop(2)
+# print(matakuliah)
+# print(sampah)
 
-# misi 3
-jumlah_koridor = int(NIM[-2])
-intelijen = 0
-perangkap_peledak = 0
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit','Bahasa Inggris',
+# 'Orsikom','Basis Data']
+# # Menampilkan list mulai dari indeks 1 hingga 5 dengan loncatan 2
+# print(matakuliah[0:7:3])#formatnya: nama_list[start:stop:step]
 
-if jumlah_koridor >= 1:
-    for i in range(1, jumlah_koridor+1):
-        for j in range(1, 4): 
-            if j % 2 == 1:
-                intelijen += 1
-            else:
-                perangkap_peledak += 1
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit','Bahasa Inggris',
+# 'Orsikom','Basis Data']
+# # Menampilkan list mulai dari indeks 1 hingga 5 dengan loncatan 2
+# print(matakuliah[0::3])#formatnya: nama_list[start:stop:step]
 
-    print("\n============ MISI 3: PENYELIDIKAN ============")
-    print(f"Jumlah koridor: {jumlah_koridor}")
-    print(f"Jumlah Ruangan: {jumlah_koridor * 3}")
-    print(f"Data Intelijen ditemukan: {intelijen}")
-    print(f"Perangkap Peledak dijinakkan: {perangkap_peledak}")
-    print("==============================================")
+# matakuliah = ['PTI', 'APD','Kalkulus','Diskrit','Bahasa Inggris',
+# 'Orsikom','Basis Data']
+# # Menampilkan list mulai dari indeks 1 hingga 5 dengan loncatan 2
+# print(matakuliah[::2])#formatnya: nama_list[start:stop:step]
+
+# a = [1, 2, 3]
+# b = [4, 5, 6]
+# # menggabungkan kedua list dengan operator (+)
+# c = a + b
+# d = [1,4,5]
+# e = [1,2,4]
+# f = d + e
+# print(c+f)
+
+# # Membuat Nested List
+# kelas = [
+# ["Ridho", "Lian", "Nabil"],#list 0
+# ["Daffa", "Dante", "Santoso"], #list 1
+# ["Pernanda", "Riyadi", "Ahnaf"] # list 2
+# ]
+# print(kelas[0][1])
+# # Memanggil elemen "Santoso"
+
+# Membuat Nested List
+# kelas = [
+# ["Ridho", "Lian", "Nabil"],["Daffa", "Dante", "Santoso"],["Pernanda", "Riyadi", "Ahnaf"] # list 2
+# ]
+
+# print(kelas[0][2][0])
+# Memanggil elemen "Santoso"
+
+# list mahasiswa
+# mahasiswa = [["Daffa", "Dante", "Santoso"], ["Pernanda", "Triya", "Ahnaf"]]
+# # perulangan for untuk mendapatkan semua elemen
+# for i in mahasiswa:
+#  print(i)
+#  for j in i :
+#   print (j)
+# # i dan j merupakan variabel sementara / temporary, kita dapat menggantinya
+# dengan apa saja asal sesuai dengan syarat nama variabel
+
+# #mendefinisikan tuple
+# anggota = ("riyadi", 20, True, 3.96, ["APD",25],("samarinda",12))
+# print(anggota)
+
+# # tuple
+# tugas = ('rangkuman', 'arduino','scrapping')
+# # beri variabel setiap values
+# (PTI, orsikom, basisdata) = tugas
+# print(PTI)
+# print(orsikom)
+# print(basisdata)
+
+# # tuple
+# barang = ('triangle','bola', 'meja', 'handphone', 'televisi')
+# # beri variabel setiap values
+# (segitiga, bulat, *kotak) = barang
+# print(segitiga)
+# print(bulat)
+# print(kotak)
+
+# # tuple
+# barang = ('triangle','bola', 'meja', 'handphone', 'televisi')
+# # beri variabel setiap values
+# (segitiga, bulat, *kotak) = barang
+# print(segitiga)
+# print(bulat)
+# print(kotak)
+
+# # tuple
+# barang = ('triangle','bola', 'meja', 'handphone', 'televisi')
+# angka=(1,2,3)
+# # simpan di dalam variabel baru
+# gabung=barang+angka
+# print(gabung)
+# # output
+# ('triangle', 'bola', 'meja', 'handphone', 'televisi', 1, 2, 3)
+
+# barang = [["triangle",'bola'], ['meja','handphone'], ['televisi','laptop']]
+
+# for nama_barang in barang:
+#     print(nama_barang)
+#     (barang1, barang2) = nama_barang
+#     print(barang1)
+#     print(barang2)
+
+# buatkan list yang berisi 2 list dan 1 tuple,
+# gunakan perulangan untuk mengeluarkan list satu persatu dan unpacking untuk tuple
+
+# mahasiswa = [["satu","dua"],[]]
+
+# kelas = [
+# ["Ridho", "Lian", "Nabil"],#list 0
+# ["Daffa", "Dante", "Santoso"], #list 1
+mahasiswa = [["asoy","yosa"],["bib","bub"],("bas","sah")]
+for nama_mahasiswa in mahasiswa:
+    
